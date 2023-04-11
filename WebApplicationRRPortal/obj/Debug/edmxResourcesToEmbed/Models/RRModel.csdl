@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRUATModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ClientIconPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="NotificationsID" />
+    </Key>
+    <Property Name="NotificationsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateTimeCreated" Type="DateTime" Nullable="false" />
+    <Property Name="NotificationType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SenderId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsRead" Type="Byte" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Description_" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User_personal_info">
+    <Key>
+      <PropertyRef Name="idUser_personal_info" />
+    </Key>
+    <Property Name="idUser_personal_info" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PersonalEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AdmissionDate" Type="DateTime" Nullable="false" />
+    <Property Name="EmployerNumber" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="IdClient" Type="Int32" />
+    <Property Name="ManagerNameId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsManager" Type="Byte" />
+  </EntityType>
+  <EntityType Name="User_profile_photo">
+    <Key>
+      <PropertyRef Name="User_profile_photoId" />
+    </Key>
+    <Property Name="User_profile_photoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="ProfilePhotoId" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="RRUATEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" />
+    <EntitySet Name="User_personal_info" EntityType="Self.User_personal_info" />
+    <EntitySet Name="User_profile_photo" EntityType="Self.User_profile_photo" />
+  </EntityContainer>
+</Schema>

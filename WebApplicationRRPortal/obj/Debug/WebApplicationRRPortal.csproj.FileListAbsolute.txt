@@ -1,0 +1,2 @@
+C:\Users\ChristopherRivadeney\source\repos\RRPortalEmpresarial\WebApplicationRRPortal\obj\Debug\WebApplicationRRPortal.csproj.AssemblyReference.cache
+C:\Users\ChristopherRivadeney\source\repos\RRPortalEmpresarial\WebApplicationRRPortal\obj\Debug\WebApplicationRRPortal.csproj.CoreCompileInputs.cache
