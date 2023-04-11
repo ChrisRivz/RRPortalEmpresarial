@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
+<<<<<<< HEAD
+VisualStudioVersion = 17.5.33424.131
+=======
 VisualStudioVersion = 17.5.33516.290
+>>>>>>> 6911e941aa7c3798f1031e2efc00d7849c2cf013
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationRRPortal", "WebApplicationRRPortal.csproj", "{DAF256B0-9178-4E3D-B564-D609F831731C}"
 EndProject
@@ -20,6 +24,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
+		SolutionGuid = {447CA7D7-E70E-4498-AAE8-58265CF6CA1F}
+=======
 		SolutionGuid = {6F904117-D02F-4EF5-8507-36861233D91B}
+>>>>>>> 6911e941aa7c3798f1031e2efc00d7849c2cf013
 	EndGlobalSection
 EndGlobal
