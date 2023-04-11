@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApplicationRRPortal",
+    "\\WebApplicationRRPortal\\Models"
   ],
-  "SelectedNode": "\\C:\\Users\\ChristopherRivadeney\\Source\\Repos\\RRPortalEmpresarial",
+  "SelectedNode": "\\WebApplicationRRPortal",
   "PreviewInSolutionExplorer": false
 }
