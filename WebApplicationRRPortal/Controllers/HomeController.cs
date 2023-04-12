@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebGrease.Css.Ast.Selectors;
-using WebApplicationRRPortal.UsersModels;
 
 namespace WebApplicationRRPortal.Controllers
 {
