@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.SqlClient
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection;
+using WebApplicationRRPortal.Models;
 
 namespace WebApplicationRRPortal.Controllers
 {
@@ -33,10 +35,6 @@ namespace WebApplicationRRPortal.Controllers
             return View();
         }
 
-        public bool Test()
-        {
-            using (var context = new RRUATEntities)
-        }
 
     }
 }
