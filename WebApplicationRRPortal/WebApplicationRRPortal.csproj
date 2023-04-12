@@ -477,6 +477,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RRModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\UsersModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
