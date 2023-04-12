@@ -525,26 +525,48 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Context.cs">
+    <Compile Include="Models\Clients.cs">
+      <DependentUpon>ModelRR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelRR.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>ModelRR.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
+    <Compile Include="Models\ModelRR.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>ModelRR.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\UsersModel.cs" />
+    <Compile Include="Models\ModelRR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelRR.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Notifications.cs">
+      <DependentUpon>ModelRR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_personal_info.cs">
+      <DependentUpon>ModelRR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_profile_photo.cs">
+      <DependentUpon>ModelRR.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\ModelRR.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>ModelRR.edmx</DependentUpon>
+      <LastGenOutput>ModelRR.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelRR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelRR.edmx</DependentUpon>
+      <LastGenOutput>ModelRR.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\LoginComp.js" />
     <Content Include="Web.config" />
@@ -569,13 +591,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\ModelRR.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelRR.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </None>
+    <Content Include="Models\ModelRR.edmx.diagram">
+      <DependentUpon>ModelRR.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="SBOM\spdx_2.2\manifest.spdx.json.sha256" />
     <Content Include="SBOM\spdx_2.2\manifest.spdx.json" />

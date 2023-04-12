@@ -29,17 +29,7 @@ namespace WebApplicationRRPortal.Controllers
             return View();
         }
 
-        public void Test(string idUser_personal_info) {
-
-            
-        //var test = from pa in
-
-            var query = from u in UsersModels
-                        where u.idUser_personal_info == idUser_personal_info
-                        select u;
-            Console.WriteLine(query);
-
-        }
+       
         
     }
 

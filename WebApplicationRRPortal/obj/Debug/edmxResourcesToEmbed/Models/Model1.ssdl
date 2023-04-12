@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RRUATModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="45" />
+    <Property Name="ClientIconPath" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Notifications">
+    <Key>
+      <PropertyRef Name="NotificationsID" />
+    </Key>
+    <Property Name="NotificationsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateTimeCreated" Type="datetime" Nullable="false" />
+    <Property Name="NotificationType" Type="varchar" MaxLength="20" />
+    <Property Name="SenderId" Type="varchar" MaxLength="50" />
+    <Property Name="IsRead" Type="tinyint" />
+    <Property Name="Title" Type="varchar" MaxLength="20" />
+    <Property Name="Description_" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="User_personal_info">
+    <Key>
+      <PropertyRef Name="idUser_personal_info" />
+    </Key>
+    <Property Name="idUser_personal_info" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonalEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdmissionDate" Type="date" Nullable="false" />
+    <Property Name="EmployerNumber" Type="varchar" MaxLength="45" />
+    <Property Name="IdClient" Type="int" />
+    <Property Name="ManagerNameId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsManager" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="User_profile_photo">
+    <Key>
+      <PropertyRef Name="User_profile_photoId" />
+    </Key>
+    <Property Name="User_profile_photoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhotoPath" Type="varchar" MaxLength="45" />
+    <Property Name="ProfilePhotoId" Type="int" />
+  </EntityType>
+  <EntityContainer Name="RRUATModelStoreContainer">
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_personal_info" EntityType="Self.User_personal_info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_profile_photo" EntityType="Self.User_profile_photo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
